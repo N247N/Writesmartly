@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WriteSmartly</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F5F5F5;
+      color: #333333;
+      padding: 20px;
+    }
+
+    /* Header Styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #0A2647;
+      color: #FFFFFF;
+      position: relative; /* Added for dropdown positioning */
+      z-index: 1000; /* Ensure header stays on top */
+    }
+
+    .header-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    /* Navigation Menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #FFD700;
+    }
+
+    /* Sign Up Button */
+    .signup-button {
+      background-color: #FFD700;
+      color: #0A2647;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-button:hover {
+      background-color: #FFC107;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #FFFFFF;
+    }
+    /* h1 */
+    
+    .h1 h1 {color: #ff7b00;
+    }
+    h1 {
+  text-align: center;
+}
+    /* Content Section */
+    .content {
+      background-color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .content h1 {color: #ff7b00;
+    }
+    .content h2 {
+      color: #0b2d54;
+    }
+
+    .content ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .content ul li {
+      margin-bottom: 8px;
+    }
+/* ===== Newsletter Section ===== */
+.newsletter {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0c355d; /* Blue outline */
+}
+
+.newsletter h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #090909; /* Blue text */
+}
+
+.newsletter p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333; /* Dark gray text */
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #0073e6; /* Blue outline */
+    border-radius: 8px;
+    width: 300px;
+    max-width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #ff6f61; /* Coral accent on focus */
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f68914; /* Blue background */
+    color: rgb(6, 6, 6);
+    border: rgb(240, 213, 213);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+.newsletter {
+    background: linear-gradient(135deg, #f0f8ff, #e6f0ff); /* Light blue gradient */
+    padding: 60px 20px;
+}
+.disclaimer {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #777; /* Light gray text */
+}
+
+   /* Footer Styles */
+footer {
+  background-color: #0A2647;
+  color: #FFFFFF;
+  min-height: 20px; /* Adjust this value as needed */
+  padding: 20px 10%;
+  margin-top: px;
+  font-family: 'Lexend', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center; /* Center align logo and tagline */
+}
+
+.footer-logo .logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.footer-logo .tagline {
+  font-size: 0.9rem;
+  color: #CCCCCC;
+}
+
+.footer-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.footer-menu ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-menu ul li a:hover {
+  color: #FFD700;
+}
+
+.footer-copyright {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #CCCCCC;
+}
+
+   /* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 5%;
+    position: relative; /* Ensure header stays in place */
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute; /* Position the dropdown absolutely */
+    top: 60px; /* Adjust this value based on header height */
+    right: 0%;
+    background-color: #0A2647;
+    padding: 5%; /* Add padding for better spacing */
+    border-radius: 5px;
+    gap: 10px; /* Add gap between menu items */
+    z-index: 1001; /* Ensure dropdown is above other elements */
+    width: 150px; /* Set a fixed width for the dropdown */
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  /* Ensure the header does not resize when the menu is open */
+  header.active {
+    height: auto; /* Keep header height consistent */
+  }
+}
+
+      /* Footer adjustments for mobile */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: 230px;
+    padding: 50px 10%;
+    padding: 0px 10%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    padding: 10px 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-bottom: 20px; /* Add space below tagline */
+}
+
+
+  .footer-logo .logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+  }
+
+  .footer-logo .tagline {
+    font-size: 0.9rem;
+    color: #CCCCCC;
+    white-space: nowrap;
+    flex-direction: column;
+    gap: 15px; /* Adjust the spacing */
+    margin-bottom: 20px;
+  }
+
+  .footer-menu ul {
+    padding: 30px 0%;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    padding: 0;
+    margin-top: 20px;
+        width: 100%;
+  }
+
+  .footer-menu ul li {
+    text-align: center;
+  }
+
+  .footer-copyright {
+    margin-top: 10px;
+    padding: 5%;
+  }
+}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-logo">WriteSmartly</div>
+    <nav>
+      <ul>
+        <li><a href="#">Start Now</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><button class="signup-button">Sign Up</button></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+<br>
+<br>
+<div class="h1">
+  <h1>Welcome To WriteSmartly</h1>
+
+  <div class="content">
+    <h1>Terms and Conditions</h1>
+    <p>Welcome to WriteSmartly! By accessing or using our website, you agree to comply with and be bound by the following terms and conditions.</p>
+<br>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By using WriteSmartly, you agree to these Terms and Conditions. If you do not agree, please do not use our services.</p>
+    <br>
+
+    <h2>2. Use of Services</h2>
+    <p>You may use our services for lawful purposes only. You are responsible for all content you submit to WriteSmartly.</p>
+    <br>
+
+    <h2>3. Intellectual Property</h2>
+    <p>All content on WriteSmartly, including text, graphics, and logos, is the property of WriteSmartly and is protected by copyright laws.</p>
+    <br>
+
+    <h2>4. User Accounts</h2>
+    <p>You are responsible for maintaining the confidentiality of your account and password. Notify us immediately of any unauthorized use of your account.</p>
+    <br>
+
+    <h2>5. Limitation of Liability</h2>
+    <p>WriteSmartly is not liable for any damages arising from the use of our services. We provide our services "as is" without warranties of any kind.</p>
+    <br>
+
+    <h2>6. Changes to Terms</h2>
+    <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting on our website.</p>
+    <br>
+
+    <h2>7. Governing Law</h2>
+    <p>These Terms and Conditions are governed by the laws of the jurisdiction in which WriteSmartly operates.</p>
+    <br>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:terms@writesmartly.com">terms@writesmartly.com</a>.</p>
+  </div>
+</section>
+  <footer>
+  <div class="footer-logo">
+    <div class="logo-text">WriteSmartly</div>
+    <div class="tagline">Write Smart with WriteSmartly</div>
+  </div>
+  <nav class="footer-menu">
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="footer-copyright">
+    &copy; 2025 All rights reserved. WriteSmartly LLC
+  </div>
+</footer>
+
+  <script>
+    
+    function toggleMenu() {
+      const navUl = document.querySelector('header nav ul');
+      navUl.classList.toggle('active');
+    }
+    document.querySelector('.newsletter-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the form from submitting
+    const email = document.querySelector('.newsletter-form input[type="email"]').value;
+    alert(`Thank you for subscribing! We've sent your free guide to ${email}.`);
+    // You can add code here to send the email to your server or email marketing service
+});
+  </script>
+</body>
+</html>

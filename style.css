@@ -1,0 +1,533 @@
+ /* General Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+    color: #333333;
+    padding: 20px;
+  }
+
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #0A2647;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1000; /* Ensure header stays on top */
+  }
+
+  .header-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid rgb(240, 126, 26); /* Cursor effect */
+    width: 0;
+    animation: typing 2s steps(20, end) forwards, blink 0.6s infinite;
+  }
+
+  /* Typing Effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 14.5%; /* Adjust width to match text length */
+    }
+  }
+
+  /* Blinking Cursor Effect */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* Navigation Menu */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #FFD700;
+  }
+
+  /* Sign Up Button */
+  .signup-button {
+    background-color: #FFD700;
+    color: #0A2647;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .signup-button:hover {
+    background-color: #FFC107;
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+  }
+
+  /* h1 */
+  .h1 h1 {
+    color: #ff7b00;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  /* Content Section */
+  .content {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  .content h1 {
+    color: #ff7b00;
+  }
+
+  .content h2 {
+    color: #0b2d54;
+  }
+
+  .content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .content ul li {
+    margin-bottom: 8px;
+  }
+
+  .impact-section {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .impact-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .impact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .impact-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+
+  .impact-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0073e6;
+  }
+
+  .impact-text {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 768px) {
+    .impact-container {
+      flex-direction: column;
+    }
+  }
+
+  /* Reference Websites Section */
+  .reference-websites {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #9da1a5;
+  }
+
+  .reference-websites h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .websites-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .website {
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .website img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+
+  .website p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #090404;
+  }
+
+  .custom-link {
+    text-decoration: none; /* Removes the underline */
+    color: #05080a; /* Changes text color */
+    font-weight: bold; /* Makes text bold (optional) */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+  }
+
+  .custom-link:hover {
+    color: #0056b3; /* Changes color on hover */
+  }
+
+  /* Hover Effect */
+  .website:hover {
+    transform: scale(1.05);
+  }
+
+  .website img:hover {
+    border-color: #007BFF;
+    transform: scale(1.1);
+  }
+
+  /* ===== Newsletter Section ===== */
+  .newsletter {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .newsletter-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0c355d; /* Blue outline */
+  }
+
+  .newsletter h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #090909; /* Blue text */
+  }
+
+  .newsletter p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333; /* Dark gray text */
+  }
+
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-form input[type="email"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #0073e6; /* Blue outline */
+    border-radius: 8px;
+    width: 300px;
+    max-width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .newsletter-form input[type="email"]:focus {
+    border-color: #ff6f61; /* Coral accent on focus */
+  }
+
+  .newsletter-form button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f68914; /* Blue background */
+    color: rgb(6, 6, 6);
+    border: rgb(240, 213, 213);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+
+  .newsletter {
+    background: linear-gradient(135deg, #f0f8ff, #e6f0ff); /* Light blue gradient */
+    padding: 60px 20px;
+  }
+
+  .disclaimer {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #777; /* Light gray text */
+  }
+
+  /* Footer Styles */
+  footer {
+    background-color: #0A2647;
+    color: #FFFFFF;
+    min-height: 20px; /* Adjust this value as needed */
+    padding: 20px 10%;
+    margin-top: px;
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center; /* Center align logo and tagline */
+  }
+
+  .footer-logo .logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .footer-logo .tagline {
+    font-size: 0.9rem;
+    color: #CCCCCC;
+  }
+
+  .footer-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .footer-menu ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .footer-menu ul li a:hover {
+    color: #FFD700;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #CCCCCC;
+  }
+
+  /* Social Icons Container (Mobile Centered) */
+  .social-icons {
+    display: inline-flex;
+    padding-top: 30px;
+    padding-bottom: 0fx;
+    gap: 30px;
+  }
+
+  /* Base style for each circular icon */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover default */
+  .icon-circle:hover {
+    background-color: #555;
+  }
+
+  /* Specific Hover Colors */
+  .icon-circle.facebook:hover {
+    background-color: #3b5998; /* Facebook Blue */
+  }
+
+  .icon-circle.twitter:hover {
+    background-color: #1da1f2; /* Twitter Blue */
+  }
+
+  .icon-circle.instagram:hover {
+    background-color: #e1306c; /* Instagram Pink/Red */
+  }
+
+  /* Icon font size */
+  .icon-circle i {
+    font-size: 15px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      padding: 15px 5%;
+      position: relative; /* Ensure header stays in place */
+    }
+
+    /* Typing Effect */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 51%; /* Adjust width to match text length */
+      }
+    }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute; /* Position the dropdown absolutely */
+      top: 60px; /* Adjust this value based on header height */
+      right: 0%;
+      background-color: #0A2647;
+      padding: 5%; /* Add padding for better spacing */
+      border-radius: 5px;
+      gap: 10px; /* Add gap between menu items */
+      z-index: 1001; /* Ensure dropdown is above other elements */
+      width: 150px; /* Set a fixed width for the dropdown */
+    }
+
+    nav ul.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+    }
+
+    /* Ensure the header does not resize when the menu is open */
+    header.active {
+      height: auto; /* Keep header height consistent */
+    }
+
+    /* Footer adjustments for mobile */
+    footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      min-height: 230px;
+      padding: 50px 10%;
+      padding: 0px 10%;
+      text-align: center;
+    }
+
+    .footer-logo {
+      padding: 10px 10%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      padding-bottom: 20px; /* Add space below tagline */
+    }
+
+    .footer-logo .logo-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .footer-logo .tagline {
+      font-size: 0.9rem;
+      color: #CCCCCC;
+      white-space: nowrap;
+      flex-direction: column;
+      gap: 15px; /* Adjust the spacing */
+      margin-bottom: 20px;
+    }
+
+    .footer-menu ul {
+      padding: 30px 0%;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      padding: 0;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .footer-menu ul li {
+      text-align: center;
+    }
+
+    .footer-copyright {
+      margin-top: 1px;
+      padding: 5%;
+    }
+  }
